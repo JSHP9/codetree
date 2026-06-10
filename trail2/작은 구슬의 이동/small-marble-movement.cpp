@@ -9,7 +9,7 @@ int Dir(char d) {
 }
 
 bool IsRange(int x, int y, int n) {
-    return (1 <= x && x <= n && 1 <= y && y <= n);
+    return (1 <= x && x <= n && 1 <= y && y <= n); // arr가 아니라 행렬임
 }
 
 
@@ -26,7 +26,7 @@ int main() {
     while (t--) {
         nx = x + dx[move], ny = y + dy[move];
         if (!IsRange(nx, ny, n)) {
-            move = 3 - move; // 방향 전환
+            move = 3 - move; // 방향 전환에 1초 소요함
         }
         else {
         x += dx[move], y += dy[move];
