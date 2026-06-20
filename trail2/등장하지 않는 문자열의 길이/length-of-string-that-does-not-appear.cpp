@@ -8,17 +8,16 @@ int main() {
     string str;
     cin >> n >> str;
 
-    for (int len = 1; len <= n; ++len) {
-        set<string> s;
+    for (int len = 1; len < n; ++len) {
+        set<string> st;
         bool duplicated = false;
-
         for (int i = 0; i + len <= n; ++i) {
-            string sub = str.substr(i, len);
-            if (s.count(sub)) {
+            string s = str.substr(i, len);
+            if (st.count(s)) {
                 duplicated = true;
                 break;
             }
-            s.insert(sub);
+            st.insert(s);
         }
         if (!duplicated) {
             cout << len;
