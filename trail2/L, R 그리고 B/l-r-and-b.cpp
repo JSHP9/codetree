@@ -47,7 +47,6 @@ int main() {
                 continue;
             if (board[nx][ny] == 'R')
                 continue;
-            // ④ 방문 처리
             visited[nx][ny] = true;
             dist[nx][ny] = dist[x][y] + 1;
 
